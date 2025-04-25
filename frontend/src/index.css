@@ -1,0 +1,507 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    background-color: #e9e9e9;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    border: 1px solid #dee2e6;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Navbar Basic */
+.navbar {
+    background-color: #343a40;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.navbar a:hover {
+    color: #adb5bd;
+}
+
+.navbar .brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 1rem;
+}
+
+.navbar .nav-links button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.navbar .nav-links button:hover {
+    color: #adb5bd;
+}
+
+
+/* Forms Basic */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.form-group textarea {
+    min-height: 100px;
+    font-family: inherit;
+}
+
+
+/* Buttons Basic */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    /* Add space below buttons */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    color: #212529;
+    border: 1px solid #ced4da;
+}
+
+.btn-light:hover {
+    background-color: #e2e6ea;
+}
+
+
+/* Alert messages */
+.alert {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s ease infinite;
+    margin: 2rem auto;
+    /* Center spinner */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Problem List Table */
+.problems-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.problems-table th,
+.problems-table td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.problems-table th {
+    background-color: #e9ecef;
+}
+
+.problems-table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.problems-table tbody tr:hover {
+    background-color: #e2e6ea;
+}
+
+.problems-table td a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.problems-table td a:hover {
+    text-decoration: underline;
+}
+
+.status-solved {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-attempted {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.status-unattempted {
+    color: #6c757d;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.filters .form-group {
+    margin-bottom: 0;
+    /* Remove default margin */
+    flex: 1 1 180px;
+    /* Allow items to grow and shrink, base width */
+    min-width: 150px;
+    /* Ensure dropdowns/inputs don't get too small */
+}
+
+.filters input[type="text"] {
+    width: auto;
+    /* Allow text input to take appropriate width */
+    flex-grow: 2;
+    /* Let search take more space if needed */
+}
+
+
+/* Problem Detail Page */
+.problem-detail {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.problem-detail h1 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.problem-detail .meta {
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+.problem-detail .meta span {
+    margin-right: 1rem;
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.difficulty-Easy {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.difficulty-Medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.difficulty-Hard {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.tag {
+    background-color: #e2e3e5;
+    color: #343a40;
+}
+
+.problem-detail h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.test-cases pre {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+}
+
+/* Code Editor Area */
+.editor-area {
+    margin-top: 1.5rem;
+}
+
+.editor-controls {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.editor-controls .language-select {
+    margin-right: 1rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.editor-container {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    overflow: hidden;
+    /* Ensure Ace editor corners are rounded */
+    height: 400px;
+    /* Default editor height */
+}
+
+.editor-container .ace_editor {
+    height: 100% !important;
+    /* Override default Ace inline style */
+    width: 100% !important;
+}
+
+
+/* Output Area */
+.output-area {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+.output-area h4 {
+    margin-top: 0;
+}
+
+.output-area pre {
+    background-color: #333;
+    /* Darker background for code output */
+    color: #f0f0f0;
+    border: none;
+    padding: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.output-area .error {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.custom-input-area textarea {
+    height: 80px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Submission Results */
+.submission-result {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.submission-result.Accepted {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.submission-result.Wrong {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.submission-result.Error {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+}
+
+.submission-result.Pending,
+.submission-result.Running {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+
+.submission-result h4 {
+    margin-top: 0;
+}
+
+.test-case-result {
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.test-case-result:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.test-case-result .status-Passed {
+    color: #155724;
+}
+
+.test-case-result .status-Failed {
+    color: #721c24;
+}
+
+
+/* Admin Dashboard */
+.admin-form label {
+    font-weight: bold;
+}
+
+.admin-form .test-case-pair {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.admin-form .test-case-pair textarea {
+    flex: 1;
+    height: 80px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.admin-form .template-code textarea {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    height: 150px;
+}
